@@ -6,6 +6,7 @@ const editPost = async (event) => {
     event.preventDefault();
     console.log("Click Successful!");
 
+    //*May not need next line of code*
     const comment_body = document.getElementById('edit_button').value.trim();
     console.log(blogPost);
 
