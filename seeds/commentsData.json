@@ -1,0 +1,20 @@
+[
+    {
+        "comments_body": "Can't wait to try this out in React!",
+        "date_created": "May 07, 2024",
+        "user_id": 3,
+        "blogPost_id": 1
+    },
+    {
+        "comments_body": "I aspire to meet this level of knowledge and proficiency!",
+        "date_created": "May 07, 2024",
+        "user_id": 3,
+        "blogPost_id": 2
+    },
+    {
+        "comments_body": "Another JavaScript trick I can't wait to implement!",
+        "date_created": "May 07, 2024",
+        "user_id": 3,
+        "blogPost_id": 3
+    }
+]
