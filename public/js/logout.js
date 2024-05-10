@@ -3,7 +3,7 @@ const logout = async () => {
     const response = await fetch("/api/users/logout", {
     //POST Request of JSON-Encoded Data
         method: "POST",
-        headers: { "Content-Type": "application.json" },
+        headers: { "Content-Type": "application/json" },
     });
 
     //Redirect to Homepage or Respond with Status Code Data
