@@ -1,3 +1,5 @@
+//Edit Blog Post Function
+
 //Split the URL to Pull Out Blog Post ID
 let blogPost = window.location.pathname.split('/');
 

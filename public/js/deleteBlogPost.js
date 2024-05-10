@@ -1,3 +1,4 @@
+//Delete Blog Post Function
 const deletePost = async (event) => {
     event.preventDefault();
     console.log("Click Successful!");
