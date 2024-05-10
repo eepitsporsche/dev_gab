@@ -7,8 +7,8 @@ const submitEdit = async (event) => {
     event.preventDefault();
 
     //Pull Form Data From createPost.handlebars
-    const postTitle = document.getElementById("titleInput").value;
-    const postDescription = document.getElementById("bodyInput").value;
+    const title = document.getElementById("titleInput").value;
+    const description = document.getElementById("bodyInput").value;
 
     if (postTitle && postDescription) {
         const response = await fetch(`/api/blogPost/${blogPost[2]}`, {
