@@ -1,0 +1,55 @@
+{{! Login and Create New Account Form }}
+
+<div class="container">
+    <div class="row">
+
+        {{! Login Form }}
+        <div class="col-md-6">
+            <h2>Login</h2>
+                <form class="form login_form">
+                    {{! Email Field }}
+                    <div class="form-group mb-2">
+                        <label class="form-label" for="email_login">Email</label>
+                        <input class="form-control" type="text" id="email_login"/>
+                    </div>
+                    {{! Password Field }}
+                    <div class="form-group mb-2">
+                        <label class="form-label" for="password_login">Password</label>
+                        <input class="form-control" type="text" id="password_login"/>
+                    </div>
+                    {{! Login Button }}
+                    <div class="form-group">
+                        <button class="btn btn-dark">Login</button>
+                    </div>
+                </form>
+        </div>
+
+        {{! Create New Account Form }}
+        <div class="col-md-6">
+            <h2>Create an Account</h2>
+                <form class="form new_account_form">
+                    <div class="form-group mb-2">
+                        <label for="new_account_form">Enter Your Name</label>
+                        <input clas="form-control" type="text" id="new_account_name"/>
+                    </div>
+                    {{! Email Field }}
+                    <div class="form-group mb-2">
+                        <label for="new_account_form">Enter Your Email</label>
+                        <input clas="form-control" type="text" id="new_account_email"/>
+                    </div>
+                    {{! Password Field }}
+                    <div class="form-group mb-2">
+                        <label for="new_account_form">Enter A Password</label>
+                        <input clas="form-control" type="text" id="new_account_password"/>
+                    </div>
+                    {{! Submit Button }}
+                    <div class="form-group">
+                        <button class="btn btn-dark" type="submit">Create New Account</button>
+                    </div>
+                </form>
+        </div>
+
+    </div>
+</div>
+
+<script src="./js/login"></script>
