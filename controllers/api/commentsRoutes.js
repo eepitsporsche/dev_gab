@@ -1,4 +1,4 @@
-//Comment Model Routes
+//Comment Model CRUD Routes
 
 const router = require('express').Router();
 const { BlogPost, Comments, User } = require('../../models');

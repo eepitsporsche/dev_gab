@@ -1,3 +1,5 @@
+//Blog Post CRUD Routes
+
 //Import Dependencies
 const router = require('express').Router();
 const { BlogPost } = require('../../models');
