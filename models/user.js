@@ -1,6 +1,7 @@
 //Import Sequelize and Database Connection
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const bcrypt = require('bcrypt');
 
 
 //Bcrypt Password Verfication Method
