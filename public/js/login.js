@@ -58,7 +58,7 @@ const newAccountForm = async (event) {
 
         //Redirect to Homepage or Respond with Status Code Data
         if (response.ok) {
-            document.location.assign("/");
+            document.location.replace("/");
         } else {
             alert(response.statusText);
         }

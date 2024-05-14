@@ -28,8 +28,8 @@ BlogPost.init(
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'user',
-                key: 'id',
+                model: "user",
+                key: "id",
             },
         },
     },
@@ -38,7 +38,7 @@ BlogPost.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'blogPost',
+        modelName: "blogPost",
     }
 );
 

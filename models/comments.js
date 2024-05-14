@@ -25,15 +25,15 @@ Comments.init(
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'user',
-                key: 'id',
+                model: "user",
+                key: "id",
             },
         },
         blogPost_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'blogPost',
-                key: 'id',
+                model: "blogPost",
+                key: "id",
             },
         },
     },
@@ -42,7 +42,7 @@ Comments.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'comments',
+        modelName: "comments",
     }
 );
 

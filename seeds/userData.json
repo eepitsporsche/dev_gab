@@ -2,16 +2,19 @@
     {
         "name": "John Smith",
         "email": "johnsmith@test.com",
-        "password": "thisisapassword"
+        "password": "thisisapassword",
+        "id": "1"
     },
     {
         "name": "Jane Doe",
         "email": "janedoe@test.com",
-        "password": "thisisapassword"
+        "password": "thisisapassword",
+        "id": "2"
     },
     {
         "name": "Porsche Herskorn",
         "email": "herskorn@gmail.com",
-        "password": "thisisapassword"
+        "password": "thisisapassword",
+        "id": "3"
     }
 ]

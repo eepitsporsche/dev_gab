@@ -1,0 +1,114 @@
+/* General Page Styling */
+
+:root {
+    --primary_color: rgb(8, 123, 149);
+    --secondary_color: rgba(0, 91, 111, 0.659);
+    --text_color: rgb(139, 34, 34);
+    --link_color: rgb(211, 166, 43);
+    --card_background: rgb(232, 224, 219);
+}
+
+a {
+    color: var(--link_color);
+    text-decoration: none;
+    padding: 3px;
+}
+
+a:hover {
+    color: var(--text_color);
+}
+
+body {
+    background-color: var(--primary_color);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--text_color);
+    letter-spacing: 0.5px;
+}
+
+header {
+    padding: 5px;
+}
+
+nav button {
+    border-radius: 7px;
+    border: none;
+    color: var(--link_color);
+    background-color: var(--card_background);
+}
+
+nav button:hover {
+    color: var(--text_color);
+}
+
+h1 {
+    padding: 15px;
+    background-color: var(--secondary_color);
+    text-shadow: 10px 10px 25px var(--primary_color),
+    -10px 10px 25px var(--primary_color),
+    -10px -10px 25px var(--primary_color),
+    10px -10px 25px var(--primary_color);
+    border-bottom: 4px solid var(--link_color);
+}
+
+main {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: var(--secondary_color);
+}
+
+/*Blog Post Card Styles*/
+.card {
+    margin: 10px;
+    background-color: var(--card_background);
+}
+
+.card:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.card-header {
+    border-radius: 0 0 10px 10px;
+    margin-top: 10px;
+}
+
+.card-body {
+    background-color: var(--secondary_color);
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 10px;
+}
+
+/* Login/New Account Form Styles*/
+.form-group {
+    background-color: var(--card_background);
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.form-control {
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.form_header {
+    text-shadow: 10px 10px 25px var(--primary_color),
+    -10px 10px 25px var(--primary_color),
+    -10px -10px 25px var(--primary_color),
+    10px -10px 25px var(--primary_color);
+}
+
+#new_account_name,
+#new_account_email,
+#new_account_password {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.create_account_box {
+    padding: 15px;
+}
+
+.btn {
+    color: var(--link_color)
+}

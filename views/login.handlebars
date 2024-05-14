@@ -5,46 +5,41 @@
 
         {{! Login Form }}
         <div class="col-md-6">
-            <h2>Login</h2>
+            <h2 class="text-center form_header">Login</h2>
                 <form class="form login_form">
                     {{! Email Field }}
                     <div class="form-group mb-2">
-                        <label class="form-label" for="email_login">Email</label>
-                        <input class="form-control" type="text" id="email_login"/>
+                        <input class="form-control" type="text" id="email_login" placeholder="Email"/>
                     </div>
                     {{! Password Field }}
                     <div class="form-group mb-2">
-                        <label class="form-label" for="password_login">Password</label>
-                        <input class="form-control" type="text" id="password_login"/>
+                        <input class="form-control" type="text" id="password_login" placeholder="Password"/>
                     </div>
                     {{! Login Button }}
                     <div class="form-group">
-                        <button class="btn btn-dark">Login</button>
+                        <button class="btn btn-secondary">Login</button>
                     </div>
                 </form>
         </div>
 
         {{! Create New Account Form }}
         <div class="col-md-6">
-            <h2>Create an Account</h2>
+            <h2 class="text-center form_header">Create an Account</h2>
                 <form class="form new_account_form">
-                    <div class="form-group mb-2">
-                        <label for="new_account_name">Enter Your Name</label>
-                        <input clas="form-control" type="text" id="new_account_name"/>
+                    <div class="form-group mb-2 create_account_box">
+                        <input clas="form-control" type="text" id="new_account_name" placeholder="Enter Your Name"/>
                     </div>
                     {{! Email Field }}
-                    <div class="form-group mb-2">
-                        <label for="new_account_email">Enter Your Email</label>
-                        <input clas="form-control" type="text" id="new_account_email"/>
+                    <div class="form-group mb-2 create_account_box">
+                        <input clas="form-control" type="text" id="new_account_email" placeholder="Enter Your Email"/>
                     </div>
                     {{! Password Field }}
-                    <div class="form-group mb-2">
-                        <label for="new_account_password">Enter A Password</label>
-                        <input clas="form-control" type="text" id="new_account_password"/>
+                    <div class="form-group mb-2 create_account_box">
+                        <input clas="form-control" type="text" id="new_account_password" placeholder="Enter A Password"/>
                     </div>
                     {{! Submit Button }}
-                    <div class="form-group">
-                        <button class="btn btn-dark" type="submit">Create New Account</button>
+                    <div class="form-group create_account_box">
+                        <button class="btn btn-secondary" type="submit">Create Account</button>
                     </div>
                 </form>
         </div>
