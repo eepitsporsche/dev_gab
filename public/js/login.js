@@ -5,8 +5,8 @@ const loginForm = async (event) => {
     event.preventDefault();
 
     //Pull Data From Login Form
-    const email = document.querySelector("#email_login").value.trim;
-    const password = document.querySelector("#password_login").value.trim;
+    const email = document.querySelector("#email_login").value.trim();
+    const password = document.querySelector("#password_login").value.trim();
 
     if (email && password) {
         const response = await fetch('/api/users/login', {
@@ -39,8 +39,8 @@ const newAccountForm = async (event) {
 
     //Pull Data Create New Account Form
     const name = document.querySelector("#new_account_name").value.trim();
-    const email = document.querySelector("#new_account_email").value.trim;
-    const password = document.querySelector("#new_account_password").value.trim;
+    const email = document.querySelector("#new_account_email").value.trim();
+    const password = document.querySelector("#new_account_password").value.trim();
 
     if (name && email && password) {
         const response = await fetch('/api/users/', {

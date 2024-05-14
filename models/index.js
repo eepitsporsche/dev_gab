@@ -1,9 +1,9 @@
 //Required Modules
 const BlogPost = require('./blogPost');
-const user = require('./user');
-const comments = require('./comments');
-const { FOREIGNKEYS } = require('sequelize/lib/query-types');
+const User = require('./user');
 const Comments = require('./comments');
+const { FOREIGNKEYS } = require('sequelize/lib/query-types');
+
 
 //Model Associations
 User.hasMany(BlogPost, {
@@ -34,4 +34,4 @@ BlogPost.hasMany(Comments, {
     onDelete: 'CASCADE',
 });
 
-module.export = { BlogPost, User, Comments };
+module.exports = { BlogPost, User, Comments };

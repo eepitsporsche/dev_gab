@@ -1,8 +1,6 @@
 //Node Modules
 require('dotenv').config();
 
-const sequelize = require('sequelize');
-
 //Sequelize Import
 const Sequelize = require('sequelize');
 

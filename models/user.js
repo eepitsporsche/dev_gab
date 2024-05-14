@@ -25,7 +25,7 @@ User.init(
             allowNull: false,
         },
         email: {
-            type: DataTypes.string,
+            type: DataTypes.STRING,
             allowNull: false,
             unique: true,
             validate: {
@@ -33,7 +33,7 @@ User.init(
             },
         },
         password: {
-            type: DataTypes.string,
+            type: DataTypes.STRING,
             allowNull:false,
             validate: {
                 len: [8],
@@ -54,7 +54,7 @@ User.init(
         },
     },
     
-        sequalize,
+        sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,

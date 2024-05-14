@@ -5,16 +5,16 @@ const exphbs = require('express-handlebars');
 
 const path = require('path');
 const routes = require('./controllers');
-const helpers = require('./utils');
+const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
-const SequelizeStore = require('connect-session-sequelize')(session-Store);
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 //Handlebars.JS Engine Helpers
-const hbs = exhbs.create({ helpers });
+const hbs = exphbs.create({ helpers });
 
 //Cookies/Session Set-Up
 const sess = {
@@ -27,7 +27,7 @@ const sess = {
     },
     resave: false,
     saveUninitialized: true,
-    store: new SequalizeStore({
+    store: new SequelizeStore({
         db: sequelize,
     }),
 };
@@ -40,7 +40,7 @@ app.set('view engine', 'handlebars');
 
 //Parse JSON Data Middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);

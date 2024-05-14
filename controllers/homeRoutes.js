@@ -51,7 +51,7 @@ router.get('/blogPost/:id', userAuth, async (req, res) => {
                 },
                 {
                     model: Comments,
-                    attributes: ['User'],
+                    attributes: [User],
                 },
             ],
         });
@@ -61,7 +61,7 @@ router.get('/blogPost/:id', userAuth, async (req, res) => {
         console.log(blogPost)
 
         //Render blogPost.handlebars if User is Logged in or Redirect to Login Page
-        res.render('blogPost' {
+        res.render('blogPost', {
         ...blogPost,
         logged_in: req.session.logged_in,
         });
@@ -82,7 +82,7 @@ router.get('/blogDashboard', userAuth, async (req, res) => {
             attributes: { exclude: ['password'] },
             include: [
                 {
-                    model:BlogPost,
+                    model: BlogPost,
                     include: [User],
                 },
                 {
@@ -146,7 +146,7 @@ router.get('createPost/:id', async (req, res) => {
         console.log(blogPost);
 
         if(req.session.logged_in) {
-            res.render('editPost', {
+            res.render('editBlogPost', {
                 ...blogPost,
                 logged_in: req.session.logged_in,
                 userId: req.session.user_id,
@@ -166,12 +166,12 @@ router.get('createPost/:id', async (req, res) => {
 router.all('/login', (req, res) => {
     //Redirect to Dashboard if User is Logged In
     if (req.session.logged_in) {
-        res.redirect('/blogDashboard');
+        res.redirect('blogDashboard');
         return;
     }
 
     //Redirect to Login Page if User is Not Logged In
-    res.render('/login');
+    res.render('login');
 });
 
 

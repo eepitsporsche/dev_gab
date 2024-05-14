@@ -2,11 +2,11 @@
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
 const blogPostRoutes = require('./blogPostRoutes');
-const commentRoutes = require('./commentRoutes');
+const commentRoutes = require('./commentsRoutes');
 
 //Middleware Routes
 router.use('/users', userRoutes);
 router.use('/blogPost', blogPostRoutes);
-router.user('/comments', commentRoutes);
+router.use('/comments', commentRoutes);
 
-module.export = router;
+module.exports = router;
