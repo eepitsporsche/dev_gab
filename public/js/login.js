@@ -30,8 +30,6 @@ const loginForm = async (event) => {
     }
 };
 
-//Login Form Event Listener
-document.querySelector(".login_form").addEventListener("submit", loginForm);
 
 //Create New Account Function
 const newAccountForm = async (event) {
@@ -64,6 +62,10 @@ const newAccountForm = async (event) {
         }
     }
 };
+
+
+//Login Form Event Listener
+document.querySelector(".login_form").addEventListener("submit", loginForm);
 
 //Create New Account Form Event Listener
 document.querySelector(".new_account_form").addEventListener("submit", newAccountForm);
