@@ -32,7 +32,7 @@ const loginForm = async (event) => {
 
 
 //Create New Account Function
-const newAccountForm = async (event) {
+const newAccountForm = async (event) => {
     event.preventDefault();
 
     //Pull Data Create New Account Form
