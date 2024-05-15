@@ -14,7 +14,7 @@ const loginForm = async (event) => {
             method: "POST",
             body: JSON.stringify({
                 email,
-                password,
+                password
             }),
             headers: {
                 "Content-Type": "application/json"
@@ -47,7 +47,7 @@ const newAccountForm = async (event) => {
             body: JSON.stringify({
                 name,
                 email,
-                password,
+                password
             }),
             headers: {
                 "Content-Type": "application/json"

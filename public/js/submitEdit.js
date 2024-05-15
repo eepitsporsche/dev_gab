@@ -10,7 +10,7 @@ const submitEdit = async (event) => {
     const title = document.getElementById("titleInput").value;
     const description = document.getElementById("bodyInput").value;
 
-    if (postTitle && postDescription) {
+    if (title && description) {
         const response = await fetch(`/api/blogPost/${blogPost[2]}`, {
             //PUT Request of JSON Data For Blog Post Edit
             method: 'PUT',
