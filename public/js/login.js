@@ -17,7 +17,7 @@ const loginForm = async (event) => {
                 password,
             }),
             headers: {
-                "Content-Type": "application/json",
+                "Content-Type": "application/json"
             },
         });
         
@@ -50,7 +50,7 @@ const newAccountForm = async (event) => {
                 password,
             }),
             headers: {
-                "Content-Type": "application/json",
+                "Content-Type": "application/json"
             },
         });
 
