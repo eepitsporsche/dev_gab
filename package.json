@@ -1,12 +1,9 @@
 {
+  "main": "server.js",
   "scripts": {
     "lint": "npx eslint **/*.js --quiet; exit 0",
     "seed": "node seeds/seed.js",
     "start": "node server.js"
-  },
-  "engines": {
-    "node": ">=20.11.1",
-    "npm": ">=10.2.4"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
