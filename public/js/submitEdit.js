@@ -19,7 +19,7 @@ const submitEdit = async (event) => {
                 description,
             }),
             headers: {
-                "Content-Type": "application/json",
+                "Content-Type": "application/json"
             },
         });
 
@@ -35,3 +35,4 @@ const submitEdit = async (event) => {
 
 //Submit Button Event Listener
 const submitButton = document.getElementById("submitEdit");
+submitButton.addEventListener("submit", submitEdit);
