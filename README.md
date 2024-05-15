@@ -18,17 +18,15 @@ Future development for this app could include a function for users to save posts
 
 
 ## Installation
-* [Inquirer v8.2.4](https://www.npmjs.com/package/inquirer/v/8.2.4) must be installed to operate this app.
 * [MySQL2](https://www.npmjs.com/package/mysql2) must be installed to operate this app.
 * [Sequelize](https://www.npmjs.com/package/sequelize) must be installed to operate this app.
 * [dotenv](https://www.npmjs.com/package/dotenv) must be installed to operate this app.
-* [Insomnia](https://docs.insomnia.rest/insomnia/install)  must be installed to operate this app.
 
 
 ## Usage
 [Clone the repository](https://github.com/eepitsporsche/dev_gab) to your machine and open the application in VS Code.
 
-<p align="center"><img src="./assets/images/cyber_store_services_github_repo.png" alt="Dev Gab GitHub Repo"></p>
+<p align="center"><img src="./assets/images/dev_gab_github_repo.png" alt="Dev Gab GitHub Repo"></p>
 
 * To initiate the Dev Gab App, enter the <code>node server.js</code> command into the server.js terminal.
 
@@ -45,15 +43,14 @@ Future development for this app could include a function for users to save posts
 
 * Start the program using the command <code>npm start</code>.
 
-* Use the Insomnia app to test route functionality.
-
-<p align="center"><img src="./assets/images/cyber_store_services_insomnia_ get_demo.png" alt="Cyber Store Services Insomnia GET Demo"></p>
-
-<p align="center"><img src="./assets/images/cyber_store_services_insomnia_put_demo.png" alt="Cyber Store Services Insomnia PUT Demo"></p>
+<p align="center"><img src="./assets/images/" alt="Dev Gab Demo"></p>
 
 
 ## Credits
 * [mdn web docs_](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) for information on cookie attributes.
+* [unblockMe YouTube Channel](https://www.youtube.com/@unblockme.digital)
+* UCB Bootcamp Instructor: [Robbert Wijtman](https://github.com/Bucky24)
+* UCB Bootcamp provided file structure and function framework for this project.
 
 
 ## Technologies Used
@@ -63,7 +60,7 @@ Future development for this app could include a function for users to save posts
 * MySQL2
 * Sequelize
 * dotenv
-* Insomnia
+* Handlebars
 
 
 ## License
