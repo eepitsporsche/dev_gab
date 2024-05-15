@@ -9,15 +9,15 @@ async function newComment(event) {
     const blogPostID = url[url.length - 1];
 
     if (commentBody) {
-        const response = await fetch(`/api/comment`, {
+        const response = await fetch('/api/comment', {
             //POST Request of JSON Data For New Blog Post Comment
-            method: 'POST',
+            method: "POST",
             body: JSON.stringify({
                 blogPostID,
                 commentBody,
             }),
             headers: {
-                "Content-Type": "application/json",
+                "Content-Type": "application/json"
             },
         });
 
