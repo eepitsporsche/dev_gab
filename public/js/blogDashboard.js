@@ -16,7 +16,7 @@ const deletePost = async (event) => {
 
             //Redirect to Blog Dashboard or Respond with Status Code Data
     if (response.ok) {
-        document.location.replace("/blogDashboard");
+        document.location.assign("/blogDashboard");
     } else {
         alert(response.statusText);
     }
