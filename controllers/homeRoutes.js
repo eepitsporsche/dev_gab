@@ -163,7 +163,7 @@ router.get('createPost/:id', async (req, res) => {
 
 
 //Login Route
-router.all('/login', (req, res) => {
+router.get('/login', (req, res) => {
     //Redirect to Dashboard if User is Logged In
     if (req.session.logged_in) {
         res.redirect('blogDashboard');
