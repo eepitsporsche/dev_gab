@@ -1,6 +1,6 @@
 //Login and Create New Account Functionality
 
-//Login Function
+//Login Function For Existing User
 const loginForm = async (event) => {
     event.preventDefault();
 
