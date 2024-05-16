@@ -9,7 +9,7 @@ const loginForm = async (event) => {
     const password = document.querySelector("#password_login").value.trim();
 
     if (email && password) {
-        const response = await fetch('/api/users/login/', {
+        const response = await fetch('/api/users/login', {
             //POST Request of JSON Data For New Blog Post
             method: "POST",
             body: JSON.stringify({
