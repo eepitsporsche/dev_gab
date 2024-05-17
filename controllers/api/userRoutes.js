@@ -5,10 +5,10 @@ const { User } = ('../../models');
 
 //Create New User in Database when User Creates an Account
 router.post('/', async (req, res) => {
+    console.log(req.body)
     try {
         const userData = await User.create(req.body);
-        console.log(req.body)
-        
+
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
