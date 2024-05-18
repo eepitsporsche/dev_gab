@@ -25,7 +25,7 @@ router.post('/', userAuth, async (req, res) => {
 
 
 //Edit Blog Post Route
-router.put('/:id', userAuth, async (req, res) => {
+router.put('create/:id', userAuth, async (req, res) => {
     console.log(req.body);
 
     try {
