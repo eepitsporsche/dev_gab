@@ -1,6 +1,6 @@
 //Import Dependencies
 const router = require('express').Router();
-const { User } = ('../../models');
+const { User } = require('../../models');
 
 
 //Create New User in Database when User Creates an Account
