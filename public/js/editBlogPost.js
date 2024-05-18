@@ -12,7 +12,7 @@ const editPost = async (event) => {
     const comment_body = document.getElementById('edit_button').value.trim();
     console.log(blogPost);
 
-    document.location.assign(`/posts/${blogPost[2]}`);
+    document.location.assign(`/blogPost/${blogPost[2]}`);
 };
 
 const editButton = document.querySelectorAll('#edit_button');
