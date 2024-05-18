@@ -9,7 +9,7 @@ const editPost = async (event) => {
     const blogPostTitle =  document.querySelector('text-area[name="blog_post_title"]').value;
     const blogPostText = document.querySelector('text-area[name="blog_post_text"]').value;
 
-    const response = await fetch(`/api/editPost/${id}`, {
+    const response = await fetch(`/api/create/${blogPostID}`, {
         method: 'PUT',
         body: JSON.stringify({
             blogPostTitle,
