@@ -1,22 +1,44 @@
 //Edit Blog Post Function
 
-//Split the URL to Pull Out Blog Post ID
-let blogPost = window.location.pathname.split('/');
-
 //Pass Blog Post ID Into 'Create' URL
 const editPost = async (event) => {
     event.preventDefault();
-    console.log("Click Successful!");
 
-    //*May not need next line of code*
-    const comment_body = document.getElementById('edit_button').value.trim();
-    console.log(blogPost);
+    //Split the URL to Pull Out Blog Post ID
+    const blogPostID = window.location.pathname.split('/')[window.location.toString().split('/').length-1];
+    const blogPostTitle =  document.querySelector('text-area[name="blog_post_title"]').value;
+    const blogPostText = document.querySelector('text-area[name="blog_post_text"]').value;
 
-    document.location.assign(`/blogPost/${blogPost[2]}`);
+    const response = await fetch(`/api/posts/${id}`, {
+        method: 'PUT',
+        body: JSON.stringify({
+            blogPostTitle,
+            blogPostText
+        }),
+        headers: { 'Content-Type': 'application/json'}
+    });
+
+    if (response.ok) {
+        document.location.replace('/dashboard')
+    } else {
+        alert(response.statusText)
+    }
 };
 
-const editButton = document.querySelectorAll('#edit_button');
+document.querySelector('.edit_post_form').addEventListener('submit', editPost);
 
-//Loop Over Edit Buttons to Add Event Listeners
-for (let i=0; i<editButton.length; i++) {
-    editButton[i].addEventListener("click", editPost)};
+
+    //     console.log("Click Successful!");
+
+//     //*May not need next line of code*
+//     const comment_body = document.getElementById('edit_button').value.trim();
+//     console.log(blogPost);
+
+//     document.location.assign(`/create/${blogPost[2]}`);
+// };
+
+// const editButton = document.querySelectorAll('#edit_button');
+
+// //Loop Over Edit Buttons to Add Event Listeners
+// for (let i=0; i<editButton.length; i++) {
+//     editButton[i].addEventListener("click", editPost)};
