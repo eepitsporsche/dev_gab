@@ -41,17 +41,11 @@ const newAccountForm = async (event) => {
     const password = document.querySelector("#new_account_password").value.trim();
 
     if (name && email && password) {
-        const response = await fetch('/api/users/', {
+        const response = await fetch('/api/users', {
             //POST Request of JSON Data For New Blog Post
             method: "POST",
-            body: JSON.stringify({
-                name,
-                email,
-                password
-            }),
-            headers: {
-                "Content-Type": "application/json"
-            },
+            body: JSON.stringify({ name, email, password }),
+            headers: { "Content-Type": "application/json" },
         });
 
         //Redirect to Homepage or Respond with Status Code Data

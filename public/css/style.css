@@ -41,15 +41,15 @@ nav button:hover {
     color: var(--text_color);
 }
 
-h1 {
-    padding: 15px;
-    background-color: var(--secondary_color);
-    text-shadow: 10px 10px 25px var(--primary_color),
-    -10px 10px 25px var(--primary_color),
-    -10px -10px 25px var(--primary_color),
-    10px -10px 25px var(--primary_color);
-    border-bottom: 4px solid var(--link_color);
-}
+    h1 {
+        padding: 15px;
+        background-color: var(--secondary_color);
+        text-shadow: 10px 10px 25px var(--primary_color),
+        -10px 10px 25px var(--primary_color),
+        -10px -10px 25px var(--primary_color),
+        10px -10px 25px var(--primary_color);
+        border-bottom: 4px solid var(--link_color);
+    }
 
 main {
     margin-top: 50px;
