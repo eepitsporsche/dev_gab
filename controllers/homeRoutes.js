@@ -100,6 +100,7 @@ router.get('/blogDashboard', userAuth, async (req, res) => {
             logged_in: true,
         });
     } catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
 });

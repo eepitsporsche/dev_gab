@@ -29,7 +29,7 @@ router.put('/:id', userAuth, async (req, res) => {
     console.log(req.body);
 
     try {
-        const blogPostData = await BlogPost.update( req.body, {
+        const blogPostData = await BlogPost.update(req.body, {
             where: {
                 id: req.params.id,
             }
@@ -44,6 +44,7 @@ router.put('/:id', userAuth, async (req, res) => {
         //Respond with 200 Success Status if Blog Post Data is Found
         res.status(200).json(blogPostData);
     } catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
 });
@@ -54,7 +55,7 @@ router.delete('/:id', userAuth, async (req, res) => {
     console.log(req.params.id);
 
     try {
-        const blogPostData = await BlogPost.destroy( req.body, {
+        const blogPostData = await BlogPost.destroy({
             where: {
                 id: req.params.id,
             }
@@ -69,6 +70,7 @@ router.delete('/:id', userAuth, async (req, res) => {
         //Respond with 200 Success Status if Blog Post Data is Found
         res.status(200).json(blogPostData);
     } catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
 });
