@@ -25,24 +25,49 @@ router.post('/', userAuth, async (req, res) => {
 
 
 //Edit Blog Post Route
-router.put('create/:id', userAuth, async (req, res) => {
-    console.log(req.body);
-
+router.get('edit/:id', async (req, res) => {
     try {
-        const blogPostData = await BlogPost.update(req.body, {
-            where: {
-                id: req.params.id,
-            }
+        const blogPostData = await BlogPost.findByPk(req.params.id, {
+            attributes: [
+                'id',
+                'title',
+                'description',
+                'date_created',
+            ],
+            //Connect User and Comment Data to Blog Post Data
+            include: [
+                {
+                    model: Comments,
+                        attributes: [
+                            'id',
+                            'comments_body',
+                            'date_created',
+                            'user_id',
+                            'blogPost_id',
+                        ],
+                        include: {
+                            model: User,
+                            attributes: ['name'],
+                        },
+                    },
+                {
+                    model: User,
+                    attributes: ['name'],
+                },
+            ],
         });
 
-        //Respond with 400 Failure Status if No Blog Post Data is Found
-        if (!blogPostData) {
-            res.status(400).json({ message: 'No blog post found with this ID.' });
-            return;
-        }
+        if (blogPostData) {
+            const blogPost = blogPostData.get({ plain: true });
 
-        //Respond with 200 Success Status if Blog Post Data is Found
-        res.status(200).json(blogPostData);
+            res.render('editBlogPost', {
+                blogPost,
+                logged_in: true
+            })
+            
+        } else {
+            res.redirect('/login')
+        }
     } catch (err) {
         console.log(err);
         res.status(500).json(err);

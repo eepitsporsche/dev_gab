@@ -40,37 +40,60 @@ router.get('/', async (req, res) => {
 
 //Get One Blog Post Route
     //userAuth Middleware Prevents Access to Route
-router.get('/blogPost/:id', userAuth, async (req, res) => {
+router.get('post/:id', userAuth, async (req, res) => {
     try {
-        const blogPostData = await BlogPost.findByPk(req.params.id, {
+        const blogPostData = await BlogPost.findOne({ where: { 
+            id: req.params.id
+            },
+            attributes: [
+                'id',
+                'title',
+                'description',
+                'date_created',
+            ],
             //Connect User and Comment Data to Blog Post Data
             include: [
+                {
+                    model: Comments,
+                        attributes: [
+                            'id',
+                            'comments_body',
+                            'date_created',
+                            'user_id',
+                            'blogPost_id',
+                        ],
+                        include: {
+                            model: User,
+                            attributes: ['name'],
+                        },
+                    },
                 {
                     model: User,
                     attributes: ['name'],
                 },
-                {
-                    model: Comments,
-                    attributes: [User],
-                },
             ],
         });
 
+        if (!blogPostData) {
+            res.status(400).json({ message: 'No blog post found with this ID.' });
+            return;
+        }
+
         //Serialize Data for Template to Read
         const blogPost = blogPostData.get({ plain: true });
-        console.log(blogPost)
 
         //Render blogPost.handlebars if User is Logged in or Redirect to Login Page
         res.render('blogPost', {
-        ...blogPost,
-        logged_in: req.session.logged_in,
+            blogPost,
+            logged_in: req.session.logged_in
         });
+
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
-        res.redirect('/login');
     }
 });
+
 
 
 //Get Dashboard Blog Data Route
@@ -118,43 +141,6 @@ router.get('/createPost', async (req, res) => {
             return;
         } else {
             res.redirect('/login');
-        }
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
-
-
-//Edit Blog Post Route
-router.get('createPost/:id', async (req, res) => {
-    try {
-        const blogPostData = await BlogPost.findByPk(req.params.id, {
-            //Connect User and Comment Data to Blog Post Data
-            include: [
-                {
-                    model: User,
-                    attributes: ['name'],
-                },
-                {
-                    model: Comments,
-                    include: [User],
-                },
-            ],
-        });
-
-        const blogPost = blogPostData.get({ plain: true });
-        console.log(blogPost);
-
-        if(req.session.logged_in) {
-            res.render('editBlogPost', {
-                ...blogPost,
-                logged_in: req.session.logged_in,
-                userId: req.session.user_id,
-            });
-            return;
-        } else {
-            res.redirect('/login')
         }
     } catch (err) {
         console.log(err);
