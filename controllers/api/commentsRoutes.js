@@ -49,19 +49,19 @@ router.post('/', async (req, res) => {
 //Update a Comment Route
 router.put('/:id', async (req, res) => {
     try {
-        const updatedComments = await Comments.update({
+        const commentData = await Comments.update({
             where: {
                 id: req.params.id,
             },
         });
 
-        if (!updatedComments[0]) {
+        if (!commentData) {
             res.status(400).json({ message: 'No comment found with that ID.' });
             return;
         }
 
         console.log('Comment has been updated.');
-        res.status(200).json(updatedComments);
+        res.status(200).json(commentData);
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -72,18 +72,18 @@ router.put('/:id', async (req, res) => {
 //Delete a Comment By ID Route
 router.delete('/:id', async (req, res) => {
     try {
-        const comments = await Comments.destroy({
+        const commentData = await Comments.destroy({
             where: {
                 id: req.params.id,
             },
         });
 
-        if (!comments) {
+        if (!commentData) {
             res.status(400).json({ message: 'No comment found with that ID.' });
             return;
         }
 
-        res.status(200).json(comments);
+        res.status(200).json(commentData);
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
