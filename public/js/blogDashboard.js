@@ -14,7 +14,7 @@ const deletePost = async (event) => {
             method: "DELETE",
         });
 
-            //Redirect to Blog Dashboard or Respond with Status Code Data
+    //Redirect to Blog Dashboard or Respond with Status Code Data
     if (response.ok) {
         document.location.assign("/blogDashboard");
     } else {
@@ -37,9 +37,10 @@ const editPost = async (event) => {
     let blogPostID = event.target.getAttribute("data-id");
     console.log(blogPostID);
 
-    //Pass Blog Post ID Into 'Create' URL
-    document.location.assign(`/create/${blogPostID}`);
+    //Pass Blog Post ID Into URL
+    document.location.assign(`/api/blogPost/${blogPostID}`);
 };
+
 
 const editButton = document.querySelectorAll('#edit_button');
 
