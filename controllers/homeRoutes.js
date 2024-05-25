@@ -19,6 +19,7 @@ router.get('/', async (req, res) => {
                     attributes: ['comments_body'],
                 },
             ],
+            order: [['date_created', 'DESC']],
         });
 
         //Serialize Data for Template to Read
@@ -40,7 +41,7 @@ router.get('/', async (req, res) => {
 
 //Get One Blog Post Route
     //userAuth Middleware Prevents Access to Route
-router.get('post/:id', userAuth, async (req, res) => {
+router.get('blogPost/:id', userAuth, async (req, res) => {
     try {
         const blogPostData = await BlogPost.findOne({ where: { 
             id: req.params.id
