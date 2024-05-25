@@ -1,4 +1,4 @@
-//Login and Create New Account Functionality
+//Login and Create New Account Forms Handler Functionality
 
 //Login Function For Existing User
 const loginForm = async (event) => {

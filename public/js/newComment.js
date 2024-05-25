@@ -1,4 +1,4 @@
-//New Comment Functionality
+//New Comment Form Handler Functionality
 
 async function newComment(event) {
     event.preventDefault();
