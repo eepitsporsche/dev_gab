@@ -1,0 +1,52 @@
+{{! Individual Post Page}}
+
+<div class="container">
+    <div class="row justify-content-center">
+
+        {{! Display Blog Post Title, Body, Author Username, Date Dreated }}
+        <article>    
+            <div class="col-md-10 mx-auto mt-5">
+                <div class="card text-dark shadow mb-3">
+                    <div class="text-center mx-auto p-3">
+                        <h2>{{title}}</h2>
+                            <p>by {{user.username}} on {{format_date date_created}}</p>
+                                <p>{{content}}</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        {{#if logged_in}}
+        {{! Comment Form}}
+        <div class="row justify-content-center">
+            <div class="text-center col-lg-10 col-md-8 col-sm-7">
+                <form id="comment_form">
+                    <div class="form-group">
+                        <label for="comment_form"><strong>Add a Comment:</strong></label>
+                            {{! Text Field For User's Comment }}
+                            <textarea class="form-control" id="new_comment_body" rows="3"></textarea>
+                            <div class="mt-2">
+                                {{! Submit Comment Button }}
+                                <button type="submit" class="btn btn-secondary">Submit</button>
+                            </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {{/if}}
+
+        {{! Display Comments for a Blog Post}}
+        {{#if comments.length}}
+        <div class="col-md-10 mx-auto mt-3">
+            <h3 class="mt-3 text-center">Comments</h3>
+            {{#each comments}}
+                <div class="card text-dark shadow mb-3">
+                    <p class="m-2">{{user.username}} says
+                        <br>{{comment_text}}</p>
+                </div>
+            {{/each}}
+        </div>
+        {{/if}}
+
+    </div>
+</div>

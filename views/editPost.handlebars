@@ -1,4 +1,4 @@
-{{! Edit New Blog Post }}
+{{! Edit Blog Post }}
 
 <div class="container">
     <div class="row">
@@ -6,24 +6,23 @@
 
             <form class="edit_post_form">
 
-                {{! Title Entry }}
+                {{! Title Edit Entry }}
                 <div class="mt-5 mb-3">
-                    <input name="blog_post_title" type="text" value="{{blogPost.title}}"/>
+                    <label for="blog_post_title" class="form-label">Post Title</label>
+                    <input id="blog_post_title" type="text" class="form-control" placeholder="Enter a title:" value="{{title}}"/>
                 </div>
 
-                {{! Body Entry }}
+                {{! Body Edit Entry }}
                 <div class="mb-3">
-                    <label class="for-label text-light" for="blog_post_text">Edit Your Blog Post:</label>
-                    <textarea name="blog_post_text" class="form-control" rows="10" id="blog_post_text">{{blogPost.description}}</textarea>
+                    <label class="for-label text-light" for="blog_post_text">Post Body</label>
+                    <textarea id="blog_post_text" class="form-control" rows="10" id="blog_post_text" placeholder="Enter post content:">{{content}}</textarea>
                 </div>
 
                 {{! Submit Button }}
                 <div class="text-center">
-                    <button type="submit" class="text-center mt-3 btn btn-dark btn-lg btn-block">Save Changes</button>
+                    <button type="submit" id="edit_post_button" class="text-center mt-3 btn btn-dark btn-lg btn-block">Save Changes</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
-
-<script src="/js/editBlogPost.js"></script>
