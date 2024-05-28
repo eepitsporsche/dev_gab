@@ -43,7 +43,7 @@ Future development for this app could include a function for users to save posts
 
 * Start the program using the command <code>npm start</code>.
 
-<p align="center"><img src="./assets/images/" alt="Dev Gab Demo"></p>
+<p align="center"><img src="./assets/images/dev_gab_demo.gif" alt="Dev Gab Demo"></p>
 
 
 ## Credits
