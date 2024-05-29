@@ -1,37 +1,39 @@
-//Required Modules
-const BlogPost = require('./blogPost');
-const User = require('./user');
-const Comments = require('./comments');
-const { FOREIGNKEYS } = require('sequelize/lib/query-types');
+//Required Models
+const User = require("./User");
+const Post = require("./Post");
+const Comment = require("./Comment");
 
 
 //Model Associations
-User.hasMany(BlogPost, {
-    foreignKey: "user_id",
-    onDelete: "CASCADE",
+User.hasMany(Post, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
 });
 
-User.hasMany(Comments, {
-    foreignKey: "user_id",
-    onDelete: "CASCADE",
+User.hasMany(Comment, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
 });
 
-BlogPost.belongsTo(User, {
-    foreignKey: "user_id",
+Post.belongsTo(User, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
 });
 
-Comments.belongsTo(User, {
-    foreignKey: "user_id",
+Comment.belongsTo(User, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
 });
 
-Comments.belongsTo(BlogPost, {
-    foreignKey: "blogPost_id",
-    onDelete: "CASCADE",
+Comment.belongsTo(Post, {
+  foreignKey: "post_id",
+  onDelete: "CASCADE",
 });
 
-BlogPost.hasMany(Comments, {
-    foreignKey: "blogPost_id",
-    onDelete: "CASCADE",
+Post.hasMany(Comment, {
+  foreignKey: "post_id",
+  onDelete: "CASCADE",
 });
 
-module.exports = { BlogPost, User, Comments };
+
+module.exports = { User, Post, Comment };
