@@ -1,12 +1,14 @@
-//Import Dependencies
-const router = require('express').Router();
-const userRoutes = require('./userRoutes');
-const blogPostRoutes = require('./blogPostRoutes');
-const commentRoutes = require('./commentsRoutes');
+//Import Packages and Models
+const router = require("express").Router();
+const userRoutes = require("./user-routes");
+const postRoutes = require("./post-routes");
+const commentRoutes = require("./comment-routes");
+
 
 //Middleware Routes
-router.use('/users', userRoutes);
-router.use('/blogPost', blogPostRoutes);
-router.use('/comments', commentRoutes);
+router.use("/users", userRoutes);
+router.use("/posts", postRoutes);
+router.use("/comments", commentRoutes);
+
 
 module.exports = router;
