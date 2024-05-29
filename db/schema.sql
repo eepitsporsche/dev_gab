@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS dev_gab;
+DROP DATABASE IF EXISTS dev_gab_db;
 
-CREATE DATABASE dev_gab;
+CREATE DATABASE dev_gab_db;
