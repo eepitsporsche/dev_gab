@@ -11,6 +11,10 @@
     "sequelize": "^6.31.1"
   },
 
+  "engines": {
+    "node": "10.2.4"
+  },
+
 "scripts": {
   "lint": "npx eslint **/*.js --quiet; exit 0",
   "seed": "node seeds/index.js",
