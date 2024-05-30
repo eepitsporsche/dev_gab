@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
 
     //Redirect to Homepage or Respond with Status Code Data
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/dashboard');
     } else {
       alert('Failed to log in.');
       console.log(response.statusText);
