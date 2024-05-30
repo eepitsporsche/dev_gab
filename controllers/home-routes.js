@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
   try {
     //Find All Posts with Associated Username
     const postData = await Post.findAll({
-      include: [{ model: User, attributes: ["username"] }],
+      include: [{ model: User, attributes: ["name"] }],
       order: [['date_created', 'DESC']],
     });
     //Serialize Post Data to Plain JavaScript Object
@@ -32,10 +32,10 @@ router.get("/post/:id", withAuth, async (req, res) => {
         //Find Post by ID with Associated Username and Associated Comments
     const postData = await Post.findByPk(req.params.id, {
       include: [
-        { model: User, attributes: ["username"] },
+        { model: User, attributes: ["name"] },
         {
           model: Comment,
-          include: [{ model: User, attributes: ["username"] }],
+          include: [{ model: User, attributes: ["name"] }],
         },
       ],
     });
@@ -58,7 +58,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
     
     const postData = await Post.findAll({
       where: { user_id: req.session.user_id },
-      include: [{ model: User, attributes: ["username"] }],
+      include: [{ model: User, attributes: ["name"] }],
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
@@ -109,10 +109,10 @@ router.get("/editpost/:id", async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
-        { model: User, attributes: ["username"] },
+        { model: User, attributes: ["name"] },
         {
           model: Comment,
-          include: [{ model: User, attributes: ["username"] }],
+          include: [{ model: User, attributes: ["name"] }],
         },
       ],
     });

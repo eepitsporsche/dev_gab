@@ -9,7 +9,7 @@
                 <div class="card text-dark shadow mb-3">
                     <div class="text-center mx-auto p-3">
                         <h2>{{title}}</h2>
-                            <p>by {{user.username}} on {{format_date date_created}}</p>
+                            <p>by {{user.name}} on {{format_date date_created}}</p>
                                 <p>{{content}}</p>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
             <h3 class="mt-3 text-center">Comments</h3>
             {{#each comments}}
                 <div class="card text-dark shadow mb-3">
-                    <p class="m-2">{{user.username}} says
+                    <p class="m-2">{{user.name}} says
                         <br>{{comment_text}}</p>
                 </div>
             {{/each}}

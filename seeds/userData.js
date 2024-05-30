@@ -4,19 +4,19 @@ const { User } = require("../models");
 //Seed Data Array
 const userData = [
   {
-    username: "JohnSmith",
+    name: "JohnSmith",
     email: "johnsmith@test.com",
     password: "thisisapassword",
     id: 1,
   },
   {
-    username: "JaneDoe",
+    name: "JaneDoe",
     email: "janedoe@test.com",
     password: "thisisapassword",
     id: 2,
   },
   {
-    username: "Charlie Day",
+    name: "Charlie Day",
     email: "herskorn@gmail.com",
     password: "paddyspub",
     id: 3,
