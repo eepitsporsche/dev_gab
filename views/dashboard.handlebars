@@ -2,17 +2,16 @@
 
 <div class="row">
     <div class="text-center mx-auto pt-2">
-        <h2>Dashboard</h2>        
+        <h2 class="dashboard_header">Dashboard</h2>        
     </div>
 </div>
 
 {{! Render User's Blog Posts}}
-<div class="text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 mx-auto mt-5">
-                {{#if posts.length}}
-                {{#each posts}}
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-10 mx-auto mt-4">
+            {{#if posts.length}}
+            {{#each posts}}
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="card text-dark shadow mb-3">
@@ -29,18 +28,26 @@
                         </div>
                     </div>
                 </div>
-                {{/each}}
+            {{/each}}
 
-                {{else}}
-                <h4 class="mb-4">No posts yet...</h4>
-                {{/if}}
-            </div>
+            {{else}}
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="card shadow mb-3" style="width:50%">
+                            <div class="text-center mx-auto p-3">
+                                <h4 class="mt-1 mb-3">No posts yet...</h4>
+            {{/if}}
+
+                                {{! Create New Post Button}}
+                                <div class="container">
+                                    <div class="row text-center">
+                                        <a href="/newpost"><button class="btn btn-dark mt-3">Create a post!</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
-    </div>
-
-{{! Create New Post Button}}
-<div class="container">
-    <div class="row text-center">
-        <a href="/newpost"><button class="btn btn-dark my-3">Create a post!</button></a>
     </div>
 </div>

@@ -25,6 +25,13 @@ body {
   letter-spacing: 0.5px;
 }
 
+main {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: var(--secondary_color);
+}
+
 header {
   padding: 5px;
   background-color: var(--text_color);
@@ -41,6 +48,7 @@ nav button:hover {
   color: var(--text_color);
 }
 
+/*Page Title Styles*/
 h1 {
   padding: 5px 0 5px 20px;
   background-color: var(--secondary_color);
@@ -52,11 +60,11 @@ h1 {
   -webkit-text-stroke: 0.5px var(--card_background);
 }
 
-main {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  padding: 20px;
-  background-color: var(--secondary_color);
+.dashboard_header {
+  text-shadow: 10px 10px 25px var(--primary_color),
+  -10px 10px 25px var(--primary_color),
+  -10px -10px 25px var(--primary_color),
+  10px -10px 25px var(--primary_color);
 }
 
 /*Blog Post Card Styles*/
