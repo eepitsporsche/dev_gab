@@ -4,14 +4,14 @@
 const loginFormHandler = async (event) => {
   event.preventDefault();
   //Pull Data From Login Form
-  const username = document.querySelector('#username_login').value.trim();
+  const name = document.querySelector('#username_login').value.trim();
   const password = document.querySelector('#password_login').value.trim();
 
-  if (username && password) {
+  if (name && password) {
     // Send POST Request to Login Endpoint with Input Values as JSON Data
     const response = await fetch('/api/users/login', {
       method: 'POST',
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ name, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
