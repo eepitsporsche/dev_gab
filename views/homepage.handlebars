@@ -1,8 +1,9 @@
 {{! Dev Gab Homepage }}
 
-{{! Display Each Blog Post }}
 <div class="container">
     <div class="row homepage-main">
+        {{! Display Each Blog Post from the Database }}
+        {{#if posts.length}}
         {{#each posts}}
             <div class="row mb-4 project card text-dark shadow">
                 <div class="card-header">
@@ -16,5 +17,29 @@
                 </div>
             </div>
         {{/each}}
+
+        {{! Display Message if No Blog Posts Exist in the Database }}
+        {{else}}
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="card shadow mb-3" style="width:50%">
+                        <div class="text-center mx-auto p-3">
+                            <h4 class="mb-4">No posts yet...</h4>
+        {{/if}}
+
+                            {{! Contribute Button }}
+                            <div class="container">
+                                <div class="row text-center">
+                                    {{#if logged_in}}
+                                    <a href="/dashboard"><button class="btn btn-dark text-center">Become a contributor!</button></a>
+                                    {{else}}
+                                    <a href="/signup"><button class="btn btn-dark text-center">Become a contributor!</button></a>
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
 </div>
