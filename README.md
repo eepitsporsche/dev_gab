@@ -47,8 +47,9 @@ Future development for this app could include a function for users to save posts
 
 
 ## Credits
-* [mdn web docs_](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) for information on cookie attributes.
+* [mdn web docs_](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
 * [unblockMe YouTube Channel](https://www.youtube.com/@unblockme.digital)
+* AskBCS: cphiri
 * UCB Bootcamp Instructor: [Robbert Wijtman](https://github.com/Bucky24)
 * UCB Bootcamp provided file structure and function framework for this project.
 
