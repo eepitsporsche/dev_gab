@@ -11,13 +11,21 @@
                     </div>
                     {{! Password Field }}
                     <div class="form-group mb-2">
-                        <input class="form-control" type="text" id="password_login" placeholder="Password"/>
+                        <input class="form-control" type="password" id="password_login" placeholder="Password"/>
                     </div>
                     {{! Login Button }}
                     <div class="form-group">
                         <button class="btn btn-secondary">Login</button>
                     </div>
                 </form>
+
+                {{! Login Button for Existing Users}}
+                <div class="d-flex justify-content-center">
+                    <div class="card mt-3 py-2 px-3" style="width: 100%">
+                        <h5 class="mb-2">Don't have an account?</h5>
+                        <a href="/signup"><button class="btn btn-secondary" type="submit">Signup</button></a>
+                    </div>
+                </div>
         </div>
     </div>
 </div>

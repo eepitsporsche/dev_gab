@@ -14,13 +14,21 @@
                     </div>
                     {{! Password Field }}
                     <div class="form-group mb-2 create_account_box">
-                        <input class="form-control" type="text" id="new_account_password" placeholder="Enter A Password"/>
+                        <input class="form-control" type="password" id="new_account_password" placeholder="Enter A Password"/>
                     </div>
                     {{! Submit Button }}
                     <div class="form-group create_account_box">
                         <button class="btn btn-secondary" type="submit">Create Account</button>
                     </div>
                 </form>
+
+                {{! Login Button for Existing Users}}
+                <div class="d-flex justify-content-center">
+                    <div class="card mt-3 py-2 px-3" style="width: 100%">
+                        <h5 class="mb-2">Already have an account?</h5>
+                        <a href="/login"><button class="btn btn-secondary" type="submit">Login</button></a>
+                    </div>
+                </div>
         </div>
     </div>
 </div>
