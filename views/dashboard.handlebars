@@ -41,7 +41,11 @@
                                 {{! Create New Post Button}}
                                 <div class="container">
                                     <div class="row text-center">
+                                        {{#if logged_in}}
                                         <a href="/newpost"><button class="btn btn-dark mt-3">Create a post!</button></a>
+                                        {{else}}
+                                        <a href="/signup"><button class="btn btn-dark text-center">Become a contributor!</button></a>
+                                        {{/if}}
                                     </div>
                                 </div>
                             </div>
