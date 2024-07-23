@@ -12,7 +12,7 @@
 
 
 ## Description
-The Dev Gab app is a content-management-style (CMS) blog site where developers in the tech industry can post articles in areas relating to the tech industry. The Express.js API, Sequelize, and a MySQL database allow users to add, edit, and delete their comments and posts.
+The [Dev Gab](https://dev-gab-4b3f57fe0b27.herokuapp.com) app is a content-management-style (CMS) blog site where developers in the tech industry can post articles in areas relating to the tech industry. The Express.js API, Sequelize, and a MySQL database allow users to add, edit, and delete their comments and posts.
 
 Future development for this app could include a function for users to save posts to read at a later date or the function to allower users to repond to other user comments.
 
